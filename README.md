@@ -26,3 +26,17 @@ pytest
 ## Demonstração do Sistema
 https://youtu.be/DyNiBPCHwvA
 
+
+## Considerações
+Para comprovar que o código desenvolvido permite a modificação do formato de mensagem sem precisar de um refatoramento substancial, basta alterar a função presente no arquivo 'main':
+```python
+def generate_sensor_message():
+    payload = {
+        "idSensor": str(uuid.uuid4()),
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "tipoPoluente": sensor_type[random.randint(0, 6)],
+        "nivel": round(random.uniform(0, 100), 1),
+    }
+    return payload
+```
+
