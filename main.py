@@ -20,7 +20,7 @@ def generate_sensor_message():
 
 def main():
     config = read_config()
-    topic = "sensor"
+    topic = "qualidadeAr"
     num_messages = 3
 
     for _ in range(num_messages):

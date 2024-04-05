@@ -22,7 +22,7 @@ def test_data_integrity():
     }
 
     config = read_config()
-    topic = "sensor"
+    topic = "qualidadeAr"
     produce_sensor_message(config, topic, message=test_message)
 
     config["group.id"] = "python-group-1"
@@ -55,7 +55,7 @@ def test_producer_consumer_persistence():
     test_message = generate_sensor_message()
 
     config = read_config()
-    topic = "sensor"
+    topic = "qualidadeAr"
     produce_sensor_message(config, topic, message=test_message)
 
     config["group.id"] = "python-group-1"
